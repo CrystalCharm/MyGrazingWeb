@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="card p-4 shadow" style="width: 600px;"> <!-- Slightly wider -->
+    <h2 class="text-center pagtitle">Sign In <i class="fas fa-sign-in-alt"></i></h2> <!-- Font Awesome icon -->
+    <form [formGroup]="signinForm" (ngSubmit)="onSignin()" novalidate>
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email </label> <!-- Font Awesome icon -->
+        <input formControlName="customerEmail" type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        <div *ngIf="signinForm.get('customerEmail')?.invalid && signinForm.get('customerEmail')?.touched" class="text-danger">
+          Please enter a valid email.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password </label> <!-- Font Awesome icon -->
+        <input formControlName="customerPassword" type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        <div *ngIf="signinForm.get('customerPassword')?.invalid && signinForm.get('customerPassword')?.touched" class="text-danger">
+          Password is required.
+        </div>
+      </div>
+      <div *ngIf="errorMessage" class="text-danger text-center">{{ errorMessage }}</div>
+      <button type="submit" class="btn btn-primary btn-md btn-block mx-auto" id="signin">Sign In</button>
+
+      <p class="text-center mt-2">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+    </form>
+  </div>
+</div>

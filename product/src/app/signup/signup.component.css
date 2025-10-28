@@ -1,0 +1,75 @@
+:host {
+  display: block;
+  background-color: #f9f5d8; /* Light background color for the host */
+  height: 100vh; /* Full height */
+}
+
+/* General Form Styles */
+form {
+  max-width: 600px; /* Set a max width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding inside the form */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Header Styles */
+h5 {
+  color: #333; /* Darker color for the headings */
+  margin-bottom: 15px; /* Space below headers */
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Input and Select Styles */
+.form-control {
+  height: 40px; /* Uniform height for inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.form-control:focus {
+  border-color: #ffdd57; /* Border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Subtle yellow glow */
+}
+
+/* Button Styles */
+.btn {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition for hover effect */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error Message Styles */
+.text-danger {
+  font-size: 14px; /* Font size for error messages */
+  margin-top: 5px; /* Space above error messages */
+}
+
+/* Text Centering Styles */
+.text-center {
+  text-align: center; /* Center text */
+}
+
+.spacer{
+  background-color: #f9f5d8;
+  color: #f9f5d8;
+}

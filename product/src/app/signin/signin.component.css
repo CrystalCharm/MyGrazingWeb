@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  background-color: #f9f5d8;
+  height: 100vh; 
+}
+
+
+.card {
+  border-radius: 10px; /* Ensure rounded corners */
+  background-color: white; /* Background color */
+  padding: 20px; /* Internal padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px; /* Added bottom margin for spacing */
+}
+
+input.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Added border color */
+}
+
+input.form-control:focus {
+  border-color: #ffdd57; /* Border color on focus */
+  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Glow effect */
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#signin {
+  background-color: #f4e05e;
+  border-color: #f4e05e;
+  font-weight: bold;
+  color: white;
+  margin: 20px auto; /* Centering with margin */
+  display: block;
+  width: 80%;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Added transition */
+}
+
+#signin:hover {
+  background-color: #f6c041;
+  border-color: #f6c041;
+}

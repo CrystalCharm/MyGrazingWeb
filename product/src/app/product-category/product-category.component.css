@@ -1,0 +1,271 @@
+* {
+  position: relative;
+}
+
+
+.pagtitle{
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: -10px;
+}
+
+th {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #f6c041;
+}
+
+tr {
+  display: block;
+  margin: 0 auto; 
+  width: fit-content;
+}
+
+.pagetitle {
+  text-align: center;
+
+}
+
+.sectionTitle {
+  background-color: #f4e05e;
+  text-align: center;
+  margin-top: 20px;
+  padding: 5px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.sectionTitleText {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.menu {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px;
+  height: 75px;
+}
+
+.menu .col-md-0 {
+  flex: 0 0 auto; 
+}
+
+.category-list {
+  font-size: 18px;
+  background-color: #f4e05e;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex; 
+  justify-content: center; 
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.category-list:hover {
+  background-color: #f9f5d8;
+  transition: 0.5s;
+}
+
+.quantity-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  background-color: #f4e05e;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.quantity-selector button {
+  background-color: #f4e05e;
+  border: none;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quantity-selector span {
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.atc {
+  background-color: #f6c041;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.productname {
+  font-weight: bold;
+  white-space: normal; 
+  display: block; 
+  text-overflow: ellipsis; 
+  margin: 5px 0; 
+  background-color: #f4e05e;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  font-size: 16px !important;
+}
+
+.product {
+  background-color: #fefcef;    
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin: 10px;
+}
+
+.head-container {
+  background-color: #f9f5d8;
+  margin-bottom: -20px;
+}
+
+
+.popup-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it’s on top */
+  transition: opacity 0.3s ease; /* Smooth fade-in/out effect */
+}
+
+.popup-content {
+  background-color: #fff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px 30px; /* Padding for content */
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  position: relative;
+  max-width: 400px; /* Maximum width of the popup */
+  width: 90%; /* Responsive width */
+  animation: fadeIn 0.3s ease; /* Fade-in animation */
+}
+
+/* Close button styles */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Darker color for visibility */
+  transition: color 0.2s ease; /* Transition effect on hover */
+}
+
+.close:hover {
+  color: #d9534f; /* Color change on hover */
+}
+
+/* Notification message styling */
+.popup-content p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Font size for message */
+  color: #333; /* Dark text color for contrast */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Slide in effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.atc:hover, .remove-btn:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.remove-btn {
+  background-color: red; 
+  margin-left: 10px;    
+}
+.remove-btn {
+  background-color: #f6c041; 
+  color: white;             
+  border: none;              
+  border-radius: 4px;      
+  padding: 10px 20px;      
+  cursor: pointer;          
+  transition: background-color 0.3s;
+}
+
+.atc:hover{
+  background-color: #d0a94d; 
+}
+.remove-btn:hover {
+  background-color: rgb(175, 67, 67); 
+}
+
+.remove-btn {
+  background-color: rgb(252, 12, 12); 
+  margin-left: 10px;     
+}
+
+
+
+.quantity-cart {
+  display: flex;                 
+  align-items: center;        
+  justify-content: center;       
+  gap: 10px;                    
+}
+
+.quantity-selector {
+  display: flex;                  
+  align-items: center;          
+}
+.quantity-selector button {
+  width: 30px;                  
+  height: 30px;               
+}
+
+.atc{
+  width: 130px;             
+  text-align: center;          
+}
+
+.productquantity{
+  font-weight: 550;        
+  
+}

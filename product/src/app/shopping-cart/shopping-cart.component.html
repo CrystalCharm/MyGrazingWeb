@@ -1,0 +1,97 @@
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+  <div *ngIf="orderItems.length === 0" class="text-center">
+    <h2 class="empty-cart-message">Your Cart is Empty <i class="fas fa-shopping-cart fa-bounce"></i></h2>
+    <button class="btn btn-primary browse-btn" [routerLink]="['/product']">Browse Products!</button>
+  </div>
+
+  <div *ngIf="orderItems.length > 0" class="row cart-content mx-auto">
+    <!-- Left Column: Items in Cart -->
+    <div class="col-md-7 cart-items">
+      <div class="cart-header">
+        <h2 class="text-center cart-title"><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+      </div>
+      <table class="table table-striped rounded">
+        <thead>
+          <tr class="table-header">
+            <th>Select</th>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of orderItems">
+            <td>
+              <input type="checkbox" class="form-check-input" [checked]="item.status === 'selected'" (change)="toggleSelection(item)" />
+            </td>
+            <td>
+              <img class="product-img" src="../assets/products/{{item.imageFile}}.png" alt="{{item.productName}}" />
+            </td>
+            <td class="product-name">{{ item.productName }}</td>
+            <td>
+              <div class="quantity-control d-flex align-items-center">
+                <button class="btn btn-secondary btn-sm quantiD" (click)="decreaseQuantity(item)">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <span class="quantity mx-2">{{ item.quantity }}</span>
+                <button class="btn btn-secondary btn-sm quantiI" (click)="increaseQuantity(item)">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </td>
+            <td [innerHTML]="formatPrice(item.price)"></td>
+            <td [innerHTML]="formatPrice(calculateTotalPerItem(item.quantity, item.price))"></td>
+            <td>
+              <button class="btn btn-danger btn-sm remove-btn" (click)="removeItem(item)">
+                <i class="fas fa-trash-alt"></i> Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Column: Checkout Items -->
+    <div class="col-md-5 checkout-items">
+      <h2 class="text-center checkout-title"><i class="fas fa-credit-card"></i> Ready for Checkout</h2>
+      <table class="table table-striped rounded">
+        <thead>
+          <tr class="table-header">
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="hasSelectedItems; else noItems">
+            <tr *ngFor="let item of orderItems">
+              <ng-container *ngIf="item.status === 'selected'">
+                <td><img class="product-img" src="../assets/products/{{item.imageFile}}.png" alt="{{item.productName}}" /></td>
+                <td class="product-name">{{ item.productName }}</td>
+                <td>{{ item.quantity }}</td>
+                <td [innerHTML]="formatPrice(item.price)"></td>
+                <td [innerHTML]="formatPrice(calculateTotalPerItem(item.quantity, item.price).toString())"></td>
+              </ng-container>
+            </tr>
+          </ng-container>
+          <ng-template #noItems>
+            <tr>
+              <td colspan="5" class="text-center no-items-message">No items ready for checkout</td>
+            </tr>
+          </ng-template>
+        </tbody>
+      </table>
+      <h4 class="text-right total-cost">Total: <span [innerHTML]="formatPrice(getOverallTotal().toString())"></span></h4>
+      <div class="d-flex justify-content-end mt-3">
+        <button class="btn btn-primary btn-md w-100 checkout-btn" [disabled]="!hasSelectedItems" (click)="OnCheckOut()">
+          <i class="fas fa-shopping-bag"></i> Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

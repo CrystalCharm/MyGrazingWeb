@@ -1,0 +1,27 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .checkout-card {
+    border-radius: 8px;
+  }
+  
+  .payment-button {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .form-text.text-muted {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .whole-form{
+    margin-bottom: 30px;
+  }

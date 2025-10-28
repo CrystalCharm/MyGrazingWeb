@@ -1,0 +1,23 @@
+<div class="order-container">
+    <h2>Recent Orders</h2>
+  
+    <div *ngIf="orders.length === 0" class="no-orders">
+      <p>No recent orders found.</p>
+    </div>
+  
+    <div *ngFor="let order of orders" class="order-card">
+      <div class="order-header">
+        <h3>Order #{{ order.id }}</h3>
+        <p class="order-status">{{ order.status }}</p>
+      </div>
+      <div class="order-info">
+        <p><strong>Order Date:</strong> {{ order.transactionDate | date }}</p>
+        <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <p><strong>Product Name:</strong> {{ order.productName }}</p>
+        <p><strong>Total Amount:</strong> ₱{{ order.totalAmount }}</p>
+        <p><strong>Address:</strong> {{ order.address }}</p>
+        <!--<p><strong>Transaction ID:</strong> {{ order.transactionId }}</p> -->
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,48 @@
+<div class="main-body" style="font-family: 'Playfair Display', serif; background-color: #fff9f3; color: #3b1c0a;">
+
+    <!-- Hero Banner Section -->
+    <div class="horizontal-banner-image" style="position: relative; width: 100%; height: 500px; overflow: hidden;">
+        <img src="assets/images/background.jpg" alt="Grazing Table Background" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(75%);" />
+        <div class="banner-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff3e0; background: rgba(59, 28, 10, 0.45); padding: 40px; border-radius: 20px; backdrop-filter: blur(4px);">
+            <h1 class="banner-title" style="font-size: 48px; margin-bottom: 10px; letter-spacing: 1px;">Welcome to SheGrazes</h1>
+            <p class="banner-subtitle" style="font-size: 18px; margin-bottom: 20px;">Elegant Grazing Tables & Boxes for Every Occasion</p>
+            <button class="hero-cta-btn" (click)="navigateToAllProducts()" 
+                style="background: linear-gradient(135deg, #d2a679, #b85c38); border: none; color: #fff3e0; padding: 12px 30px; font-size: 16px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease;">
+                Shop Now
+            </button>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-us-section" style="text-align: center; padding: 80px 20px 60px; background-color: #fff3e0; border-top: 3px solid #d2a679; border-bottom: 3px solid #d2a679;">
+        <h1 style="font-size: 36px; color: #3b1c0a; margin-bottom: 20px;">Featured Grazing Selections</h1>
+        <p style="font-size: 17px; line-height: 1.8; color: #4a2813; max-width: 850px; margin: 0 auto; font-family: 'Poppins', sans-serif;">
+            At <strong>SheGrazes by Jasmine</strong>, we curate premium grazing tables and boxes 
+            that blend taste and presentation. Perfect for weddings, corporate events, or intimate gatherings — 
+            our selections are crafted with care, combining fresh ingredients, artful design, and exceptional quality.
+        </p>
+    </div>
+
+    <!-- Product Listing -->
+    <div class="prod-list" style="padding: 60px 40px; background-color: #fff9f3;">
+        <div class="product-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; justify-items: center;">
+            <div class="product-card" *ngFor="let product of products | slice:0:6"
+                style="background: #fff3e0; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; padding-bottom: 15px;">
+                <img class="product-image" src="../assets/products/{{product.imageFile}}.png" alt="{{ product.name }}" style="width: 100%; height: 230px; object-fit: cover;" />
+                <div class="product-details" style="padding: 15px;">
+                    <h3 class="product-name" style="font-size: 20px; color: #3b1c0a; margin-bottom: 5px;">{{ product.name }}</h3>
+                    <p class="product-price" style="font-size: 16px; color: #b85c38; font-weight: 600;">₱{{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="view-more-container" style="text-align: center; margin-top: 40px;">
+            <button class="view-more-btn" (click)="navigateToAllProducts()" 
+                style="background: linear-gradient(135deg, #d2a679, #b85c38); color: #fff3e0; padding: 12px 40px; border: none; border-radius: 30px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">
+                View More Products
+            </button>
+        </div>
+    </div>
+
+</div>

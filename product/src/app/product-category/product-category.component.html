@@ -1,0 +1,59 @@
+<div class="container-fluid hero-contact p-0 m-0">
+  <div class="head-container">
+    <h1 class="pagetitle">Categories</h1>
+    <nav class="menu">
+      <button class="category-list">All</button>
+      <div *ngFor="let category of productsCategory" class="col-md-0">
+        <button class="category-list">{{category.categoryName}}</button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Popup Notification -->
+  <div *ngIf="notificationVisible" class="popup-notification">
+    <div class="popup-content">
+      <span class="close" (click)="notificationVisible = false">&times;</span>
+      <p>{{ notificationMessage }}</p>
+    </div>
+  </div>
+
+  <table>
+    <div *ngFor="let category of productsCategory" class="category">
+      <div class="sectionTitle">
+        <th><h2 class="sectionTitleText">{{category.categoryName}}</h2></th>
+      </div>
+      <tr>
+        <td *ngFor="let prod of category.products" class="col-md-4">
+          <div class="productcell">
+            <img class="product" src="../assets/products/{{prod.imageFile}}.png"/>
+            <p class="productname">{{prod.name}}</p>
+            <p class="productquantity">{{prod.quantityInStock}} in stock</p> 
+            <p class="productcategory">{{prod.description}}</p> 
+            <p class="productcategory">&#8369; {{prod.price}}</p>
+            
+            <div class="quantity-cart">
+              <div class="quantity-selector">
+                <button type="button" (click)="decreaseQuantity(prod)">-</button>
+                <span>{{quantities[prod.id] || 1}}</span>
+                <button type="button" (click)="increaseQuantity(prod)">+</button>
+              </div>
+              <button type="button" 
+                class="atc"
+                (click)="addToCart(prod)">
+                {{ isProductInCustomerCart(prod.id) ? 'Edit' : 'Add to Cart' }}
+              </button>
+          
+              <button 
+                *ngIf="isProductInCustomerCart(prod.id)"
+                type="button" 
+                class="remove-btn" 
+                (click)="removeFromCart(prod)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </div>
+  </table>
+</div>

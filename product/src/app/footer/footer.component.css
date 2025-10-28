@@ -1,0 +1,95 @@
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #f8d7b1, #d2a679); /* soft peach to warm brown */
+    color: #3b1c0a; /* deep brown text */
+    padding: 40px 0;
+    font-size: 16px;
+}
+
+/* Logo Styling */
+.logo {
+    width: 180px;
+    height: 180px;
+    border: 3px solid #fff3e0; /* soft cream border */
+    border-radius: 50%; /* perfect circular logo */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(59, 28, 10, 0.2);
+}
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(59, 28, 10, 0.3);
+}
+
+/* Branch Info and Contact Us */
+.branch-title, .delivery-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a2b12; /* darker mocha brown */
+    margin-bottom: 10px;
+}
+
+.branch-info, .note {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #3b1c0a;
+    text-align: justify;
+}
+
+.contactus h3, .socials-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a2b12;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #3b1c0a;
+}
+.contact-icon {
+    color: #7a3e1d; /* warm copper accent */
+}
+
+/* Social Media Links */
+.socials {
+    gap: 15px;
+    font-size: 20px;
+}
+.social-link {
+    color: #3b1c0a;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-link:hover {
+    color: #7a3e1d; /* coppery hover */
+    transform: scale(1.15);
+}
+
+/* Delivery Branch Grid */
+.branch-grid h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a2b12;
+    width: 400px;
+}
+.branch-grid p {
+    font-size: 15px;
+    color: #3b1c0a;
+    width: 400px;
+}
+
+.branch-grid {
+    margin-right: -50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .socials {
+        justify-content: center;
+    }
+    .branch-grid {
+        row-gap: 15px;
+    }
+}

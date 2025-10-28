@@ -1,0 +1,38 @@
+<div class="header">
+  <!-- Logo and Menu Container -->
+  <div class="logo-menu-container d-flex align-items-center">
+    <div class="logo-container me-3">
+      <img src="assets/icons/shegrazeslogo.png" alt="SheGrazes Logo" class="logo img-fluid" />    </div>
+
+    <div class="menu-container d-flex">
+      <button *ngFor="let menu of this.menus" class="menu-button" [routerLink]="menu.routerPath" (click)="menu.routerPath === 'cart' ? refreshCart() : null">
+        <!--<div *ngIf="menu.name !== 'Customer' && menu.name !== 'Contact'"> -->
+        {{ menu.name }}
+    <!---</div>--> 
+      </button>
+    </div>
+  </div>
+
+  <!-- User Section and Cart Button -->
+  <div class="user-section d-flex align-items-center">
+    <ng-container *ngIf="isLoggedIn; else guestTemplate">
+      <div class="user-info me-3">
+        <span>Welcome, {{ username }}</span>
+        <span *ngIf="userEmail"> ({{ userEmail }})</span>
+        <button class="logout-button ms-2" (click)="logout()">Logout</button>
+      </div>
+    </ng-container>
+
+    <ng-template #guestTemplate>
+      <div class="signin-buttons me-3">
+        <button class="btn-signin" routerLink="/signin">Sign In</button>
+        <button class="btn-signup" routerLink="/signup">Sign Up</button>
+      </div>
+    </ng-template>
+
+    <button class="cart-button" (click)="refreshCart()">
+      <i class="fas fa-shopping-cart icon fa-bounce"></i>
+      <span class="cart-count" *ngIf="isLoggedIn">{{ cartItemCount }}</span>
+    </button>
+  </div>
+</div>
