@@ -9,7 +9,7 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId >com.matoza</groupId >
+	<groupId >com.narvaez</groupId >
 	<artifactId >ecommerce</artifactId >
 	<version >1.0-SNAPSHOT</version >
 
@@ -99,7 +99,7 @@
 			<groupId>org.codehaus.mojo</groupId>
 			<artifactId>exec-maven-plugin</artifactId>
 			<configuration>
-				<mainClass>com.matoza.Main</mainClass>
+				<mainClass>com.narvaez.Main</mainClass>
 			</configuration>
 		</plugin>
 	</plugins>

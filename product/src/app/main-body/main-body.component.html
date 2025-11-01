@@ -1,48 +1,227 @@
-<div class="main-body" style="font-family: 'Playfair Display', serif; background-color: #fff9f3; color: #3b1c0a;">
+<div class="main-body">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-    <!-- Hero Banner Section -->
-    <div class="horizontal-banner-image" style="position: relative; width: 100%; height: 500px; overflow: hidden;">
-        <img src="assets/images/background.jpg" alt="Grazing Table Background" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(75%);" />
-        <div class="banner-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff3e0; background: rgba(59, 28, 10, 0.45); padding: 40px; border-radius: 20px; backdrop-filter: blur(4px);">
-            <h1 class="banner-title" style="font-size: 48px; margin-bottom: 10px; letter-spacing: 1px;">Welcome to SheGrazes</h1>
-            <p class="banner-subtitle" style="font-size: 18px; margin-bottom: 20px;">Elegant Grazing Tables & Boxes for Every Occasion</p>
-            <button class="hero-cta-btn" (click)="navigateToAllProducts()" 
-                style="background: linear-gradient(135deg, #d2a679, #b85c38); border: none; color: #fff3e0; padding: 12px 30px; font-size: 16px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease;">
-                Shop Now
-            </button>
+    .main-body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9f3;
+      color: #3b1c0a;
+    }
+
+    /* Hero Banner */
+    .horizontal-banner-image {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .horizontal-banner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff3e0;
+      background: rgba(59, 28, 10, 0.45);
+      padding: 50px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .banner-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .banner-subtitle {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #fff3e0;
+    }
+
+    .hero-cta-btn {
+      background: linear-gradient(135deg, #d2a679, #b85c38);
+      border: none;
+      color: #fff3e0;
+      padding: 12px 32px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .hero-cta-btn:hover {
+      background: #3b1c0a;
+      transform: translateY(-3px);
+    }
+
+    /* About Us Section */
+    .about-us-section {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background-color: #fff3e0;
+      border-top: 3px solid #d2a679;
+      border-bottom: 3px solid #d2a679;
+    }
+
+    .about-us-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: #3b1c0a;
+      margin-bottom: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .about-us-section p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #5c3a24;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Product List */
+    .prod-list {
+      padding: 80px 40px;
+      background-color: #fff9f3;
+    }
+
+    .product-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      justify-items: center;
+    }
+
+    .product-card {
+      background: #fff3e0;
+      border: 1px solid #f1c6a8;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      padding-bottom: 15px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(59, 28, 10, 0.2);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 2px solid #f1c6a8;
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #3b1c0a;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #b85c38;
+      font-weight: 600;
+    }
+
+    /* View More Button */
+    .view-more-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .view-more-btn {
+      background: linear-gradient(135deg, #d2a679, #b85c38);
+      color: #fff3e0;
+      padding: 12px 45px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+      background: #3b1c0a;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner-title {
+        font-size: 38px;
+      }
+      .about-us-section h1 {
+        font-size: 30px;
+      }
+      .prod-list {
+        padding: 50px 20px;
+      }
+    }
+  </style>
+
+  <!-- Hero Banner Section -->
+  <div class="horizontal-banner-image">
+    <img src="assets/images/background.jpg" alt="Grazing Table Background" />
+    <div class="banner-overlay">
+      <h1 class="banner-title">Welcome to SheGrazes</h1>
+      <p class="banner-subtitle">Elegant Grazing Tables & Boxes for Every Occasion</p>
+      <button class="hero-cta-btn" (click)="navigateToAllProducts()">Shop Now</button>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="about-us-section">
+    <h1>Featured Grazing Selections</h1>
+    <p>
+      At <strong>SheGrazes by Jasmine</strong>, we curate premium grazing tables and boxes 
+      that blend taste and presentation. Perfect for weddings, corporate events, or intimate gatherings —
+      our selections are crafted with care, combining fresh ingredients, artful design, and exceptional quality.
+    </p>
+  </div>
+
+  <!-- Product Listing -->
+  <div class="prod-list">
+    <div class="product-row">
+      <div class="product-card" *ngFor="let product of products | slice:0:6">
+        <img class="product-image" src="../assets/products/{{product.imageFile}}.png" alt="{{ product.name }}" />
+        <div class="product-details">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          <p class="product-price">₱{{ product.price }}</p>
         </div>
+      </div>
     </div>
 
-    <!-- About Us Section -->
-    <div class="about-us-section" style="text-align: center; padding: 80px 20px 60px; background-color: #fff3e0; border-top: 3px solid #d2a679; border-bottom: 3px solid #d2a679;">
-        <h1 style="font-size: 36px; color: #3b1c0a; margin-bottom: 20px;">Featured Grazing Selections</h1>
-        <p style="font-size: 17px; line-height: 1.8; color: #4a2813; max-width: 850px; margin: 0 auto; font-family: 'Poppins', sans-serif;">
-            At <strong>SheGrazes by Jasmine</strong>, we curate premium grazing tables and boxes 
-            that blend taste and presentation. Perfect for weddings, corporate events, or intimate gatherings — 
-            our selections are crafted with care, combining fresh ingredients, artful design, and exceptional quality.
-        </p>
+    <!-- View More Button -->
+    <div class="view-more-container">
+      <button class="view-more-btn" (click)="navigateToAllProducts()">View More Products</button>
     </div>
-
-    <!-- Product Listing -->
-    <div class="prod-list" style="padding: 60px 40px; background-color: #fff9f3;">
-        <div class="product-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; justify-items: center;">
-            <div class="product-card" *ngFor="let product of products | slice:0:6"
-                style="background: #fff3e0; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; padding-bottom: 15px;">
-                <img class="product-image" src="../assets/products/{{product.imageFile}}.png" alt="{{ product.name }}" style="width: 100%; height: 230px; object-fit: cover;" />
-                <div class="product-details" style="padding: 15px;">
-                    <h3 class="product-name" style="font-size: 20px; color: #3b1c0a; margin-bottom: 5px;">{{ product.name }}</h3>
-                    <p class="product-price" style="font-size: 16px; color: #b85c38; font-weight: 600;">₱{{ product.price }}</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- View More Button -->
-        <div class="view-more-container" style="text-align: center; margin-top: 40px;">
-            <button class="view-more-btn" (click)="navigateToAllProducts()" 
-                style="background: linear-gradient(135deg, #d2a679, #b85c38); color: #fff3e0; padding: 12px 40px; border: none; border-radius: 30px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">
-                View More Products
-            </button>
-        </div>
-    </div>
-
+  </div>
 </div>

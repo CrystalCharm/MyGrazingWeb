@@ -1,4 +1,7 @@
 <div class="container-fluid hero-contact p-0 m-0">
+  
+
+  <!-- Header -->
   <div class="head-container">
     <h1 class="pagetitle">Categories</h1>
     <nav class="menu">
@@ -17,6 +20,7 @@
     </div>
   </div>
 
+  <!-- Category & Product Display -->
   <table>
     <div *ngFor="let category of productsCategory" class="category">
       <div class="sectionTitle">
@@ -25,29 +29,24 @@
       <tr>
         <td *ngFor="let prod of category.products" class="col-md-4">
           <div class="productcell">
-            <img class="product" src="../assets/products/{{prod.imageFile}}.png"/>
+            <img class="product" src="../assets/products/{{prod.imageFile}}.png" />
             <p class="productname">{{prod.name}}</p>
-            <p class="productquantity">{{prod.quantityInStock}} in stock</p> 
-            <p class="productcategory">{{prod.description}}</p> 
+            <p class="productquantity">{{prod.quantityInStock}} in stock</p>
+            <p class="productcategory">{{prod.description}}</p>
             <p class="productcategory">&#8369; {{prod.price}}</p>
             
+            
+
             <div class="quantity-cart">
               <div class="quantity-selector">
                 <button type="button" (click)="decreaseQuantity(prod)">-</button>
                 <span>{{quantities[prod.id] || 1}}</span>
                 <button type="button" (click)="increaseQuantity(prod)">+</button>
               </div>
-              <button type="button" 
-                class="atc"
-                (click)="addToCart(prod)">
+              <button type="button" class="atc" (click)="addToCart(prod)">
                 {{ isProductInCustomerCart(prod.id) ? 'Edit' : 'Add to Cart' }}
               </button>
-          
-              <button 
-                *ngIf="isProductInCustomerCart(prod.id)"
-                type="button" 
-                class="remove-btn" 
-                (click)="removeFromCart(prod)">
+              <button *ngIf="isProductInCustomerCart(prod.id)" type="button" class="remove-btn" (click)="removeFromCart(prod)">
                 <i class="fas fa-trash"></i>
               </button>
             </div>

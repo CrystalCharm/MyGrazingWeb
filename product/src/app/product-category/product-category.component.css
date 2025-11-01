@@ -269,3 +269,235 @@ tr {
   font-weight: 550;        
   
 }
+
+
+/* CSS FOR INDIVIDUAL PRODUCTS CJ!!! -=-=-=-=-=-=-=-=-=*/
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+    /* Main Container */
+    .hero-contact {
+      background-color: #fff9f3;
+      color: #3b1c0a;
+      font-family: 'Poppins', sans-serif;
+      padding: 60px 40px;
+      min-height: 100vh;
+    }
+
+    /* Header Section */
+    .head-container {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .pagetitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #3b1c0a;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    /* Category Menu */
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .category-list {
+      background-color: #fff3e0;
+      border: 2px solid #d2a679;
+      color: #3b1c0a;
+      border-radius: 25px;
+      padding: 10px 22px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .category-list:hover,
+    .category-list.active {
+      background: linear-gradient(135deg, #d2a679, #b85c38);
+      color: #fff3e0;
+      box-shadow: 0 4px 10px rgba(59, 28, 10, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* Popup Notification */
+    .popup-notification {
+      background-color: rgba(59, 28, 10, 0.9);
+      color: #fff;
+      font-weight: 500;
+      border-radius: 8px;
+      width: 80%;
+      margin: 20px auto;
+      padding: 12px 20px;
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .close {
+      float: right;
+      cursor: pointer;
+      font-size: 22px;
+    }
+
+    /* Category Section */
+    .category {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .sectionTitleText {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #3b1c0a;
+      border-bottom: 3px solid #d2a679;
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 35px;
+    }
+
+    /* Product Grid */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 25px 30px;
+    }
+
+    .productcell {
+      background-color: #fff3e0;
+      border: 1px solid #f1c6a8;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .productcell:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(59, 28, 10, 0.2);
+    }
+
+    .product {
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #f1c6a8;
+    }
+
+    .productname {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #3b1c0a;
+      margin-bottom: 5px;
+    }
+
+    .productquantity,
+    .productcategory {
+      font-size: 14px;
+      color: #5c3a24;
+      margin: 3px 0;
+    }
+
+    /* Quantity and Buttons */
+    .quantity-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      background-color: #fff9f3;
+      border: 1px solid #d2a679;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+
+    .quantity-selector button {
+      background: linear-gradient(135deg, #d2a679, #b85c38);
+      color: #fff3e0;
+      border: none;
+      border-radius: 4px;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .quantity-selector button:hover {
+      background: #3b1c0a;
+    }
+
+    .quantity-selector span {
+      margin: 0 10px;
+      font-weight: 600;
+      color: #3b1c0a;
+    }
+
+    .atc {
+      background: linear-gradient(135deg, #d2a679, #b85c38);
+      color: #fff3e0;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .atc:hover {
+      background-color: #3b1c0a;
+      color: #fff3e0;
+      transform: translateY(-2px);
+    }
+
+    .remove-btn {
+      background: transparent;
+      border: none;
+      color: #b85c38;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .remove-btn:hover {
+      transform: scale(1.2);
+      color: #3b1c0a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .pagetitle {
+        font-size: 32px;
+      }
+      .product {
+        width: 160px;
+        height: 160px;
+      }
+      .productcell {
+        padding: 20px;
+      }
+    }
+
+
+    /* End of CSS for Individual Products CJ!!! -=-=-=-=-=-=-=-=-=*/
