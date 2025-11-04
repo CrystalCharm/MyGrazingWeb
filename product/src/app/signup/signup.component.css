@@ -1,75 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 :host {
   display: block;
-  background-color: #f9f5d8; /* Light background color for the host */
-  height: 100vh; /* Full height */
+  background-color: #fff9f3; /* Soft cream background */
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #3b1c0a; /* Warm brown text */
 }
 
 /* General Form Styles */
 form {
-  max-width: 600px; /* Set a max width for the form */
-  margin: 0 auto; /* Center the form horizontally */
-  padding: 20px; /* Add padding inside the form */
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background color */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #f1c6a8; /* Soft caramel border */
+  border-radius: 10px;
+  background-color: #fff3e0; /* Light peach background */
+  box-shadow: 0 4px 20px rgba(59, 28, 10, 0.1);
 }
 
 /* Header Styles */
 h5 {
-  color: #333; /* Darker color for the headings */
-  margin-bottom: 15px; /* Space below headers */
+  font-family: 'Playfair Display', serif;
+  color: #3b1c0a;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Form Group Styles */
 .form-group {
-  margin-bottom: 15px; /* Space between form groups */
+  margin-bottom: 15px;
 }
 
 /* Input and Select Styles */
 .form-control {
-  height: 40px; /* Uniform height for inputs */
-  padding: 10px; /* Padding inside inputs */
-  border: 1px solid #ccc; /* Light border color */
-  border-radius: 5px; /* Slightly rounded corners */
-  transition: border-color 0.3s; /* Smooth border transition */
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #f1c6a8;
+  border-radius: 5px;
+  background-color: #fff9f3;
+  color: #3b1c0a;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
-  border-color: #ffdd57; /* Border color on focus */
-  outline: none; /* Remove default outline */
-  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Subtle yellow glow */
+  border-color: #b85c38;
+  outline: none;
+  box-shadow: 0 0 6px rgba(184, 92, 56, 0.4);
 }
 
 /* Button Styles */
 .btn {
-  width: 100%; /* Full width button */
-  padding: 10px; /* Padding for the button */
-  border: none; /* No border */
-  border-radius: 5px; /* Slightly rounded corners */
-  background-color: #007bff; /* Primary blue color */
-  color: #fff; /* White text */
-  font-size: 16px; /* Font size for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition for hover effect */
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #d2a679, #b85c38);
+  color: #fff3e0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background: #3b1c0a;
+  transform: translateY(-2px);
 }
 
 /* Error Message Styles */
 .text-danger {
-  font-size: 14px; /* Font size for error messages */
-  margin-top: 5px; /* Space above error messages */
+  font-size: 14px;
+  margin-top: 5px;
+  color: #b85c38;
 }
 
 /* Text Centering Styles */
 .text-center {
-  text-align: center; /* Center text */
+  text-align: center;
+  color: #3b1c0a;
 }
 
-.spacer{
-  background-color: #f9f5d8;
-  color: #f9f5d8;
+/* Spacer */
+.spacer {
+  background-color: #fff9f3;
+  color: #fff9f3;
 }
