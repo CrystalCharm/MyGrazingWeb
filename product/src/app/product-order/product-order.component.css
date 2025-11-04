@@ -1,77 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Container */
 .order-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .order-container h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* No Orders */
-  .no-orders p {
-    font-size: 1.1rem;
-    color: #888;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-  }
-  
-  /* Order Card */
-  .order-card {
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 15px 0;
-    text-align: left;
-    transition: transform 0.3s ease;
-  }
-  
-  .order-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Order Header */
-  .order-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .order-header h3 {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .order-status {
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #ffcf40;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .order-status::first-letter {
-    text-transform: uppercase;
-  }
-  
-  /* Order Info */
-  .order-info p {
-    font-size: 1rem;
-    color: #555;
-    margin: 8px 0;
-  }
-  
-  .order-info p strong {
-    color: #333;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff9f3; /* Soft cream background */
+  color: #3b1c0a; /* Warm brown text */
+}
+
+/* Title */
+.order-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #3b1c0a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* No Orders */
+.no-orders p {
+  font-size: 1.1rem;
+  color: #5c3a24;
+  padding: 20px;
+  background-color: #fff3e0;
+  border-radius: 10px;
+  border: 1px solid #f1c6a8;
+  box-shadow: 0 4px 8px rgba(59, 28, 10, 0.05);
+}
+
+/* Order Card */
+.order-card {
+  background-color: #fff3e0;
+  box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: left;
+  border: 1px solid #f1c6a8;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(59, 28, 10, 0.15);
+}
+
+/* Order Header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #3b1c0a;
+}
+
+/* Order Status */
+.order-status {
+  font-size: 1rem;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #d2a679, #b85c38);
+  color: #fff3e0;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0 2px 5px rgba(59, 28, 10, 0.2);
+}
+
+/* Order Info */
+.order-info p {
+  font-size: 1rem;
+  color: #5c3a24;
+  margin: 8px 0;
+}
+
+.order-info p strong {
+  color: #3b1c0a;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}

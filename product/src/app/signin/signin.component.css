@@ -1,62 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 :host {
   display: block;
-  background-color: #f9f5d8;
-  height: 100vh; 
+  background-color: #fff9f3; /* soft cream background */
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #3b1c0a;
 }
 
-
+/* Card Container */
 .card {
-  border-radius: 10px; /* Ensure rounded corners */
-  background-color: white; /* Background color */
-  padding: 20px; /* Internal padding */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+  border-radius: 15px;
+  background-color: #fff3e0; /* soft peach background */
+  padding: 25px;
+  box-shadow: 0 6px 16px rgba(59, 28, 10, 0.15);
+  border: 1px solid #f1c6a8;
+  max-width: 420px;
+  margin: 80px auto;
 }
 
+/* Header */
 h2 {
-  color: #333;
-  margin-bottom: 20px; /* Added margin for spacing */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #3b1c0a;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Form Group */
 .form-group {
   position: relative;
-  margin-bottom: 15px; /* Added bottom margin for spacing */
+  margin-bottom: 18px;
 }
 
+/* Input Fields */
 input.form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc; /* Added border color */
+  border-radius: 8px;
+  border: 1px solid #f1c6a8;
+  padding: 10px 12px;
+  font-size: 1rem;
+  background-color: #fff9f3;
+  transition: all 0.3s ease;
 }
 
 input.form-control:focus {
-  border-color: #ffdd57; /* Border color on focus */
-  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5); /* Glow effect */
+  border-color: #b85c38; /* warm brown border on focus */
+  box-shadow: 0 0 6px rgba(184, 92, 56, 0.4);
+  outline: none;
 }
 
-.btn {
-  border-radius: 5px;
+/* Button */
+#signin {
+  background: linear-gradient(135deg, #d2a679, #b85c38);
+  border: none;
+  font-weight: 600;
+  color: #fff3e0;
+  margin: 25px auto;
+  display: block;
+  width: 80%;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+#signin:hover {
+  background: #3b1c0a;
+  transform: translateY(-3px);
+}
+
+/* Link Styling */
 a {
-  color: #007bff;
+  color: #b85c38;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #3b1c0a;
 }
 
-#signin {
-  background-color: #f4e05e;
-  border-color: #f4e05e;
-  font-weight: bold;
-  color: white;
-  margin: 20px auto; /* Centering with margin */
-  display: block;
-  width: 80%;
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Added transition */
-}
-
-#signin:hover {
-  background-color: #f6c041;
-  border-color: #f6c041;
+/* Optional: Smaller text (like “Don’t have an account?”) */
+.small-text {
+  font-size: 0.9rem;
+  color: #5c3a24;
+  text-align: center;
+  margin-top: 10px;
 }

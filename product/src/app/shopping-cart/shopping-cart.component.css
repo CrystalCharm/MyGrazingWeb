@@ -1,113 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Cart Styling */
 .cart-content {
   width: 100%;
   max-width: 1200px;
-  background-color: #ffffff;
+  background-color: #fff9f3; /* light cream background */
+  font-family: 'Poppins', sans-serif;
+  color: #3b1c0a; /* deep brown text */
 }
 
 .empty-cart-message {
   font-size: 1.5rem;
-  color: #331306;
+  color: #3b1c0a;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 
 .browse-btn {
-  background: linear-gradient(135deg, #f4e05e, #ffcf40);
+  background: linear-gradient(135deg, #d2a679, #b85c38);
   border: none;
-  color: #331306;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  color: #fff3e0;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  padding: 10px 25px;
 }
 .browse-btn:hover {
-  background: linear-gradient(135deg, #ffcf40, #f4e05e);
+  background: #3b1c0a;
+  transform: translateY(-3px);
 }
 
 .cart-title, .checkout-title {
-  color: #331306;
-  font-weight: bold;
-  background: linear-gradient(135deg, #f4e05e, #ffcf40);
+  color: #fff3e0;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #d2a679, #b85c38);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
 }
 
 .table {
   font-size: 0.9rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: #fff3e0;
+  box-shadow: 0 6px 12px rgba(59, 28, 10, 0.1);
 }
 
 .table-header {
-  background-color: #333;
-  color: #ffffff;
-  font-weight: bold;
+  background-color: #b85c38;
+  color: #fff3e0;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 .form-check-input {
-  /* Increase checkbox size  and center in table*/
-  transform: scale(1.2); 
-
+  transform: scale(1.2);
 }
 
 .product-img {
-  width: 80px; /* Match original size */
+  width: 80px;
   height: auto;
+  border-radius: 10px;
 }
 
 .quantity-control .btn {
-  color: #331306;
-  border: 1px solid #ffcf40;
+  color: #3b1c0a;
+  border: 1px solid #d2a679;
+  background-color: #fff3e0;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.quantity-control .btn:hover {
+  background-color: #d2a679;
+  color: #fff3e0;
 }
 
 .quantity {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #3b1c0a;
 }
 
 .remove-btn {
-  background: #ff5a5f;
-  color: #ffffff;
-  transition: background 0.3s ease;
+  background: #b85c38;
+  color: #fff3e0;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 .remove-btn:hover {
-  background: #ff4a4f;
+  background: #3b1c0a;
 }
 
 .no-items-message {
   font-size: 1rem;
-  color: #999;
+  color: #5c3a24;
 }
 
 .total-cost {
   font-size: 1.2rem;
-  font-weight: bold;
-  color: #331306;
+  font-weight: 700;
+  color: #3b1c0a;
+  font-family: 'Playfair Display', serif;
 }
 
 .checkout-btn {
-  background: linear-gradient(135deg, #f4e05e, #ffcf40);
-  font-weight: bold;
+  background: linear-gradient(135deg, #d2a679, #b85c38);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   border: none;
-  color: #331306;
-  transition: background 0.3s ease, transform 0.3s ease;
+  color: #fff3e0;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease, transform 0.3s ease;
 }
 .checkout-btn:hover {
-  background: linear-gradient(135deg, #ffcf40, #f4e05e);
+  background: #3b1c0a;
   transform: scale(1.05);
 }
 
-
-/* Center text for all table headers and data cells */
 .table th, .table td {
   text-align: center;
   vertical-align: middle;
+  color: #3b1c0a;
+  font-family: 'Poppins', sans-serif;
 }
 
-.quantiI{
-  background-color: #ffcf40;
-  border: 1px solid #ffcf40;
+.quantiI {
+  background-color: #d2a679;
+  border: 1px solid #b85c38;
   border-radius: 5px;
 }
 
-.quantiD{
-  background-color: #ffe7a1;
-  border: 1px solid #ffcf40;
+.quantiD {
+  background-color: #fff3e0;
+  border: 1px solid #d2a679;
   border-radius: 5px;
 }
